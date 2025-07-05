@@ -1,3 +1,4 @@
+import "./globals.css";
 //now the metadata that we share across the app
 export const metadata = {
   title: 'DiscoBuddy',
@@ -8,20 +9,19 @@ export const metadata = {
 
 
 // This is the main layout wrapper for every page in the app
+import './globals.css'
+
 export default function RootLayout({
-  children, // This is whatever content the current page wants to show
+  children,
 }: {
-  children: React.ReactNode; // Type hint: the "children" must be valid UI
+  children: React.ReactNode
 }) {
   return (
-    <html lang="en"> {/*tells the browser the page is in English */}
-      <body className="bg-black text-white min-h-screen">
-        {/*this sets the background color and text color as well as the minimum height */}
-
+    <html lang="en">
+      <body className="overflow-hidden">
         {children}
-        {/*where is where the actual page content gets inserted */}
-
       </body>
     </html>
-  );
+  )
 }
+
